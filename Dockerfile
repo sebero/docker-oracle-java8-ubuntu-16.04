@@ -13,7 +13,7 @@ RUN apt-get update && \
   apt-get dist-upgrade -y
 
 ## Remove any existing JDKs
-RUN apt-get --purge remove openjdk*
+RUN apt-get -y --purge remove openjdk*
 
 ## Install Oracle's JDK
 RUN echo "oracle-java8-installer shared/accepted-oracle-license-v1-1 select true" | debconf-set-selections
